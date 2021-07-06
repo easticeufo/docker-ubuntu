@@ -12,9 +12,9 @@ RUN dpkg --add-architecture i386; \
     cd /home; \
     wget https://packagecloud.io/github/git-lfs/packages/ubuntu/xenial/git-lfs_2.1.1_amd64.deb/download -O git-lfs_2.1.1_amd64.deb; \
     dpkg -i git-lfs_2.1.1_amd64.deb; \
-    wget https://download1483.mediafire.com/3mx0y00nnogg/nu5axdjykyg9d2t/fsl-linaro-toolchain.tar.gz; \
-    tar -xzf fsl-linaro-toolchain.tar.gz -C /opt; \
-    
+    git clone https://github.com/tiansixinxi/filestore.git; \
+    tar -xzf filestore/fsl-linaro-toolchain.tar.gz -C /opt; \
+    rm -rf filestore/; \
     mkdir /opt/03_toolchain; \
     wget https://releases.linaro.org/components/toolchain/binaries/7.3-2018.05/aarch64-linux-gnu/gcc-linaro-7.3.1-2018.05-x86_64_aarch64-linux-gnu.tar.xz; \
     tar xf gcc-linaro-7.3.1-2018.05-x86_64_aarch64-linux-gnu.tar.xz -C /opt/03_toolchain; \
