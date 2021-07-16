@@ -9,6 +9,7 @@ RUN dpkg --add-architecture i386; \
     DEBIAN_FRONTEND=noninteractive apt-get install -y make; \
     DEBIAN_FRONTEND=noninteractive apt-get install -y git; \
     DEBIAN_FRONTEND=noninteractive apt-get install -y lib32bz2-1.0 lib32z1 lib32ncurses5 lib32ncursesw5 lib32stdc++6 libexpat1-dev:i386; \
+    DEBIAN_FRONTEND=noninteractive apt-get install -y scons; \
     cd /home; \
     wget https://packagecloud.io/github/git-lfs/packages/ubuntu/xenial/git-lfs_2.1.1_amd64.deb/download -O git-lfs_2.1.1_amd64.deb; \
     dpkg -i git-lfs_2.1.1_amd64.deb; \
